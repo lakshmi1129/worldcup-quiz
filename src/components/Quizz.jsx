@@ -101,11 +101,11 @@ export default function Quizz() {
             <div className="min-h-screen flex justify-center items-center bg-cover bg-center"
             style={{ backgroundImage: `url(${stadium})` }}>
                 <Confetti recycle={false} numberOfPieces={800} />
-                <div className="bg-black/60 backdrop-blur-md p-10 rounded-3xl text-center text-white border border-white/20">
-                    <h1 className="text-7xl font-extrabold text-yellow-400 mb-6">
+                <div className="w-full max-w-2xl mx-4 bg-black/60 backdrop-blur-md border border-white/20 rounded-3xl text-center text-white p-6 sm:p-8 md:p-10">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-yellow-400 mb-6">
                     🏆 GAME OVER 🏆
                     </h1>
-                    <p className="text-3xl mb-4">
+                    <p className="text-xl sm:text-2xl md:text-3xl mb-4">
                     FIFA World Cup Quiz Completed
                     </p>
                     <button
@@ -120,7 +120,7 @@ export default function Quizz() {
     }
 
     return (
-        <div className="min-h-screen flex justify-center items-center bg-cover bg-center" style={{backgroundImage: `url(${stadium})`,}}>
+        <div className="min-h-screen flex justify-center items-center bg-cover bg-center" style={{backgroundImage: `url(${stadium})`}}>
             {
                 showCelebration && (
                     <>
@@ -132,7 +132,7 @@ export default function Quizz() {
                     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
                         {/* GOAL Text */}
                         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 animate-bounce">
-                        <h1 className="text-8xl font-extrabold text-green-400 drop-shadow-lg">
+                        <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold text-green-400 drop-shadow-lg">
                             GOOOAAALLL!!
                         </h1>
                         </div>
@@ -140,7 +140,7 @@ export default function Quizz() {
                         <img
                         src={football}
                         alt=""
-                        className="absolute w-28 animate-football"
+                        className="absolute w-16 sm:w-24 md:w-28 animate-football"
                         />
                     </div>
                     </>
@@ -153,22 +153,22 @@ export default function Quizz() {
                     <div className="absolute inset-0 bg-black/60"></div>
                     {/* Missed Goal Text */}
                     <div className="absolute top-1/3 left-1/2 -translate-x-1/2">
-                        <h1 className="miss-text text-8xl font-black text-red-500">
+                        <h1 className="miss-text text-4xl sm:text-6xl md:text-8xl text-center px-4 font-black text-red-500">
                         ❌ Off Target!
                         </h1>
                     </div>
                     {/* Sad Football */}
                     <div className="absolute left-1/2 bottom-20 -translate-x-1/2">
-                        <div className="animate-sadball text-8xl">
+                        <div className="animate-sadball text-5xl sm:text-6xl md:text-8xl">
                         ⚽😢
                         </div>
                     </div>
                     </div>
                 )
             }
-        <div className="max-w-3xl w-full rounded-3xl p-8 bg-white/10 backdrop-blur-md border border-white/20  shadow-2xl  text-white ">
-            <div className="flex justify-between mb-6">
-                <h2 className="font-bold text-xl">
+        <div className="w-full max-w-5xl rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl text-white p-5 sm:p-6 md:p-8 lg:p-10" >
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+                <h2 className="font-bold text-2xl sm:text-3xl text-center">
                     FIFA WORLD CUP QUIZ
                 </h2>
                 {/* <span className="bg-green-600 text-white px-4 py-2 rounded-full">
@@ -176,19 +176,16 @@ export default function Quizz() {
                 </span> */}
             </div>
             <div className="mb-4">
-                <p className="text-white">
+                <p className="text-white text-base sm:text-lg md:text-xl">
                     Question {currentQuestion + 1} / {questions.length}
                 </p>
             </div>
-            <h1 className="text-3xl font-bold mb-8">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-center leading-relaxed">
                 {question.question}
             </h1>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {question.options.map((option, index) => (
-                    <button
-                    key={option}
-                    onClick={() => handleSelect(option)}
-                    className={`p-4 rounded-xl border border-white text-lg font-semibold transition-all duration-300 ${getButtonStyle(option)}`}>
+                    <button key={option} onClick={() => handleSelect(option)} className={`p-4 sm:p-5 rounded-xl border border-white text-base sm:text-lg md:text-xl font-semibold transition-all duration-300 hover:scale-105 ${getButtonStyle(option)}`}>
                         <span className="font-bold mr-2">
                             {String.fromCharCode(65 + index)}.
                         </span>
@@ -199,7 +196,7 @@ export default function Quizz() {
             {
                 selected && !checked && (
                     <div className="flex justify-center mt-8">
-                    <button onClick={checkAnswer} className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full flex items-center gap-2 shadow-xl">
+                    <button onClick={checkAnswer} className="bg-green-600 hover:bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg md:text-xl flex items-center gap-2 shadow-xl hover:scale-110 transition-all">
                         ⚽ Check Answer
                     </button>
                     </div>
@@ -208,7 +205,7 @@ export default function Quizz() {
             {
                 checked && (
                     <div className="flex justify-center mt-8">
-                            <button onClick={nextQuestion} className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full flex items-center gap-2 shadow-xl">
+                            <button onClick={nextQuestion} className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg md:text-xl rounded-full flex items-center gap-2 shadow-xl hover:scale-110 transition-all">
                             ⚽ Next Question
                             </button>
                     </div>
