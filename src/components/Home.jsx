@@ -25,12 +25,12 @@ export default function Home() {
 
         {/* Title */}
         <h1 className="text-yellow-400 font-extrabold leading-tight text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-          FIFA WORLD CUP
+         GOAL RUSH
         </h1>
 
         {/* Subtitle */}
         <h2 className="text-white mt-4 font-semibold text-xl sm:text-2xl md:text-3xl">
-          Quiz Competition
+          Quiz 
         </h2>
 
         {/* Description */}

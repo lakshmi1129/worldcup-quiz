@@ -169,7 +169,7 @@ export default function Quizz() {
         <div className="w-full max-w-5xl rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl text-white p-5 sm:p-6 md:p-8 lg:p-10" >
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
                 <h2 className="font-bold text-2xl sm:text-3xl text-center">
-                    FIFA WORLD CUP QUIZ
+                    GOAL RUSH
                 </h2>
                 {/* <span className="bg-green-600 text-white px-4 py-2 rounded-full">
                     Score: {score}
