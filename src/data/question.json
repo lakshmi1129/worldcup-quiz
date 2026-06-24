@@ -86,7 +86,7 @@
   {
     "id": 15,
     "question": "What trophy is awarded to the winner of the FIFA World Cup?",
-    "options": ["Jules Rimet Shield", "FIFA Golden Cup", "FIFA World Trophy", "FIFA World Cup Trophy"],
+    "options": ["Jules Rimet Shield", "CONCACAF Gold Cup", "Continental Championship", "FIFA World Cup Trophy"],
     "answer": "FIFA World Cup Trophy"
   },
   {
